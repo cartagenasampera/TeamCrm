@@ -232,61 +232,64 @@ tr:hover { background: #faf8f3; cursor: pointer; }
 let data = [];
 let currentLeader = null;
 let editingProspect = null;
-const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1DWQbcTNXQ1kOuoi6GtV3HWeT4_nhbTAyoEo_DxDYnOA/pub?gid=1107778853&single=true&output=csv';
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxsGNiQl3-1SUN1rExorAJX79HOGCoL2-_17MxlI6rwO7TxchK2v7uZw0_qJrotbe_EMg/exec';
+const SHEET_ID = '1DWQbcTNXQ1kOuoi6GtV3HWeT4_nhbTAyoEo_DxDYnOA';
+const GID = '1107778853';
  
-function parseCSV(text) {
-  const rows = [];
-  let cur = [], field = '', inQuote = false;
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (inQuote) {
-      if (c === '"' && text[i+1] === '"') { field += '"'; i++; }
-      else if (c === '"') inQuote = false;
-      else field += c;
-    } else {
-      if (c === '"') inQuote = true;
-      else if (c === ',') { cur.push(field); field = ''; }
-      else if (c === '\n') { cur.push(field); rows.push(cur); cur = []; field = ''; }
-      else if (c !== '\r') field += c;
-    }
-  }
-  if (field !== '' || cur.length) { cur.push(field); rows.push(cur); }
-  return rows;
-}
- 
+// Load sheet via a workaround - use Google Sheets API JSON endpoint
 function loadSheet() {
   document.getElementById('loadingBar').style.width = '30%';
-  fetch(SHEET_CSV_URL, { cache: 'no-store' })
-    .then(res => res.text())
-    .then(text => {
-      document.getElementById('loadingBar').style.width = '70%';
-      const rows = parseCSV(text).filter(r => r.some(c => c.trim()));
-      if (rows.length < 2) {
-        document.getElementById('landingStatus').textContent = 'Error: Sheet vacío';
-        return;
-      }
-      
-      const headers = rows[0].map(h => h.trim());
-      data = rows.slice(1).map(row => {
-        const obj = {};
-        headers.forEach((h, i) => obj[h] = (row[i] || '').trim());
-        return obj;
-      }).filter(r => r.ID && r.Nombre);
-      
-      document.getElementById('loadingBar').style.width = '100%';
-      setTimeout(() => { document.getElementById('loadingBar').style.width = '0'; }, 500);
-      
-      if (currentLeader) render();
-      else {
-        document.getElementById('landing').classList.remove('hidden');
-        document.getElementById('landingStatus').textContent = `${data.length} prospectos cargados`;
-      }
-    })
-    .catch(e => {
-      document.getElementById('landingStatus').textContent = 'Error cargando Sheet';
-      console.error('Sheet load error:', e);
-    });
+  
+  // Intenta con JSONP (sin CORS)
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/query?tq=select%20*&gid=${GID}&tqx=out:json&callback=processData`;
+  
+  const script = document.createElement('script');
+  script.src = url;
+  script.onload = () => {
+    console.log('Sheet loaded');
+    document.getElementById('loadingBar').style.width = '100%';
+    setTimeout(() => { document.getElementById('loadingBar').style.width = '0'; }, 500);
+  };
+  script.onerror = () => {
+    document.getElementById('landingStatus').textContent = 'Error: No se pudo cargar el Sheet. ¿Está publicado?';
+    console.error('Sheet load failed');
+  };
+  document.head.appendChild(script);
+}
+ 
+function processData(response) {
+  try {
+    if (response.isError()) {
+      console.error('Sheet error:', response.getReasons());
+      document.getElementById('landingStatus').textContent = 'Error en el Sheet';
+      return;
+    }
+    
+    const rows = response.getRows();
+    const cols = response.getColumns();
+    
+    if (rows.length === 0) {
+      document.getElementById('landingStatus').textContent = 'Sheet vacío';
+      return;
+    }
+    
+    // Mapear datos
+    data = rows.map(row => {
+      const obj = {};
+      cols.forEach((col, i) => {
+        obj[col.getLabel()] = row.getValue(i) || '';
+      });
+      return obj;
+    }).filter(r => r.ID && r.Nombre);
+    
+    if (currentLeader) render();
+    else {
+      document.getElementById('landing').classList.remove('hidden');
+      document.getElementById('landingStatus').textContent = `${data.length} prospectos cargados`;
+    }
+  } catch(e) {
+    console.error('Process data error:', e);
+    document.getElementById('landingStatus').textContent = 'Error procesando datos';
+  }
 }
  
 function selectLeader(leader) {
@@ -377,6 +380,8 @@ function saveProspect() {
   editingProspect.Comentario = document.getElementById('modal-comment').value;
   
   document.getElementById('syncStatus').textContent = 'Guardando...';
+  
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxsGNiQl3-1SUN1rExorAJX79HOGCoL2-_17MxlI6rwO7TxchK2v7uZw0_qJrotbe_EMg/exec';
   
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
