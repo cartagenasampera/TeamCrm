@@ -24,7 +24,7 @@
 html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); min-height: 100vh; -webkit-font-smoothing: antialiased; }
 body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.05), transparent 60%), radial-gradient(ellipse at bottom left, rgba(107,111,61,0.04), transparent 60%); }
 .app { max-width: 1600px; margin: 0 auto; padding: 28px 24px; }
-
+ 
 /* LANDING */
 .landing { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
 .landing-card { max-width: 720px; width: 100%; text-align: center; }
@@ -49,7 +49,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .upline-btn { background: var(--ink); color: var(--bg); border: none; padding: 14px 28px; font-family: var(--mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; border-radius: 8px; cursor: pointer; }
 .upline-btn:hover { background: var(--terracotta); }
 .landing-status { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); margin-top: 32px; }
-
+ 
 /* LOADING */
 .loading-overlay { position: fixed; inset: 0; background: rgba(245,241,234,0.95); display: none; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(8px); }
 .loading-overlay.show { display: flex; }
@@ -57,7 +57,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .spinner { width: 40px; height: 40px; border: 3px solid var(--bg-sunk); border-top-color: var(--terracotta); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loader-text { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; }
-
+ 
 /* HEADER */
 .dashboard { display: none; }
 .dashboard.active { display: block; }
@@ -82,7 +82,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .btn-secondary:hover { background: var(--bg-hover); border-color: var(--mocha); }
 .btn-danger { background: var(--terracotta-bg); color: var(--terracotta); border: 1px solid var(--terracotta); }
 .btn-danger:hover { background: var(--terracotta); color: var(--bg); }
-
+ 
 /* TABS */
 .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .tab { background: transparent; border: none; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-mute); padding: 12px 20px; cursor: pointer; font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -1px; }
@@ -92,7 +92,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .tab.active .tab-count { background: var(--terracotta-bg); color: var(--terracotta); }
 .view { display: none; }
 .view.active { display: block; }
-
+ 
 /* RANK CARD */
 .rank-card { background: linear-gradient(135deg, var(--bg-panel), var(--bg-card)); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 28px; align-items: center; }
 .rank-card.loyo { border-color: var(--olive); }
@@ -116,7 +116,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .balance-side.izq .balance-value { color: var(--terracotta); }
 .balance-side.der .balance-value { color: var(--olive); }
 .balance-sub { font-family: var(--mono); font-size: 9px; color: var(--ink-faint); margin-top: 4px; }
-
+ 
 /* KPIs */
 .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
 .kpi { background: var(--bg-panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; transition: all 0.2s; }
@@ -128,7 +128,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .kpi-value.gold { color: var(--gold); }
 .kpi-value.mocha { color: var(--mocha); }
 .kpi-sub { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); margin-top: 6px; }
-
+ 
 /* ACTION QUEUE */
 .action-queue { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
 .panel { background: var(--bg-panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
@@ -144,7 +144,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .queue-name { font-weight: 600; font-size: 13px; text-transform: capitalize; margin-bottom: 3px; }
 .queue-note { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.04em; }
 .queue-empty { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); text-align: center; padding: 24px; font-style: italic; }
-
+ 
 /* GRID + TABLE */
 .grid { display: grid; grid-template-columns: 300px 1fr; gap: 16px; }
 .sidebar { display: flex; flex-direction: column; gap: 14px; }
@@ -156,7 +156,7 @@ body { background-image: radial-gradient(ellipse at top right, rgba(184,88,66,0.
 .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
 .search-input { width: 100%; background: var(--bg-card); border: 1px solid var(--line); color: var(--ink); padding: 10px 13px; font-family: var(--mono); font-size: 12px; border-radius: 6px; outline: none; transition: border-color 0.15s; }
 .search-input:focus { border-color: var(--terracotta); background: var(--bg-panel); }
-
+ 
 .table-wrap { overflow-x: auto; max-height: 580px; overflow-y: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 thead { position: sticky; top: 0; background: var(--bg-card); z-index: 10; }
@@ -169,7 +169,7 @@ tbody tr { transition: background 0.12s; cursor: pointer; }
 tbody tr:hover { background: var(--bg-card); }
 .prospect-name { font-weight: 600; color: var(--ink); text-transform: capitalize; font-size: 13px; }
 .prospect-meta { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
-
+ 
 .badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; white-space: nowrap; }
 .badge::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 .badge.hot { color: var(--terracotta); background: var(--terracotta-bg); }
@@ -185,14 +185,14 @@ tbody tr:hover { background: var(--bg-card); }
 .badge.lider-loyo { color: var(--olive); background: var(--olive-bg); }
 .badge.lider-monica { color: var(--rose); background: var(--rose-bg); }
 .badge.lider-none { color: var(--ink-faint); background: var(--bg-sunk); }
-
+ 
 .score { font-family: var(--mono); font-weight: 700; font-size: 13px; display: inline-block; width: 38px; text-align: center; padding: 3px 0; border-radius: 6px; }
 .score.high { color: var(--terracotta); background: var(--terracotta-bg); }
 .score.mid { color: var(--gold); background: var(--gold-bg); }
 .score.low { color: var(--slate); background: var(--slate-bg); }
 .score.zero { color: var(--ink-faint); background: var(--bg-sunk); }
 .comments-cell { color: var(--ink-soft); font-size: 12px; max-width: 240px; font-style: italic; }
-
+ 
 /* MODAL */
 .modal-bg { position: fixed; inset: 0; background: rgba(42,37,32,0.5); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
 .modal-bg.open { display: flex; }
@@ -213,7 +213,7 @@ tbody tr:hover { background: var(--bg-card); }
 .form-field input, .form-field select, .form-field textarea { background: var(--bg-card); border: 1px solid var(--line); color: var(--ink); padding: 10px 12px; font-family: var(--sans); font-size: 13px; border-radius: 6px; outline: none; transition: border-color 0.15s; }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--terracotta); background: var(--bg-panel); }
 .form-field textarea { resize: vertical; min-height: 70px; font-family: var(--sans); }
-
+ 
 /* X */
 .x-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; padding: 16px; }
 .x-card { background: var(--bg-panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; transition: all 0.15s; }
@@ -226,7 +226,7 @@ tbody tr:hover { background: var(--bg-card); }
 .x-controls { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--bg-card); flex-wrap: wrap; gap: 10px; }
 .x-stats { display: flex; gap: 20px; font-family: var(--mono); font-size: 11px; color: var(--ink-mute); flex-wrap: wrap; }
 .x-stats strong { color: var(--terracotta); font-size: 14px; font-weight: 700; }
-
+ 
 /* RANGOS */
 .rank-table { width: 100%; }
 .rank-row { display: grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line-soft); }
@@ -241,10 +241,10 @@ tbody tr:hover { background: var(--bg-card); }
 .rank-status.done { color: var(--olive); }
 .rank-status.now { color: var(--terracotta); font-weight: 700; }
 .rank-status.todo { color: var(--ink-mute); }
-
+ 
 .tip-box { background: var(--bg-card); border-radius: 8px; padding: 16px; margin-top: 16px; border-left: 3px solid var(--terracotta); font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
 .tip-label { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 600; }
-
+ 
 .footer-note { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); text-align: center; padding: 24px; border-top: 1px solid var(--line); margin-top: 24px; }
 @media (max-width: 1100px) {
   .grid { grid-template-columns: 1fr; }
@@ -257,18 +257,18 @@ tbody tr:hover { background: var(--bg-card); }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-card); }
 ::-webkit-scrollbar-thumb { background: var(--ink-faint); border-radius: 4px; }
-
+ 
 .toast { position: fixed; bottom: 24px; right: 24px; background: var(--olive); color: var(--bg); padding: 12px 20px; border-radius: 8px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transform: translateY(100px); opacity: 0; transition: all 0.3s; z-index: 200; box-shadow: 0 10px 30px rgba(107,111,61,0.3); }
 .toast.show { transform: translateY(0); opacity: 1; }
 .toast.error { background: var(--terracotta); }
-
+ 
 .setup-banner { background: var(--gold-bg); border: 1px solid var(--gold); border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; font-size: 13px; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .setup-banner strong { color: var(--terracotta); }
 .setup-banner.hidden { display: none; }
 </style>
 </head>
 <body>
-
+ 
 <!-- LANDING -->
 <div class="landing" id="landing">
   <div class="landing-card">
@@ -297,21 +297,21 @@ tbody tr:hover { background: var(--bg-card); }
     <div class="landing-status">v5.0 · Live Sheet + edición · 4 pestañas</div>
   </div>
 </div>
-
+ 
 <!-- LOADING -->
 <div class="loading-overlay" id="loading">
   <div class="loader"><div class="spinner"></div><div class="loader-text" id="loader-text">Conectando...</div></div>
 </div>
-
+ 
 <!-- DASHBOARD -->
 <div class="dashboard" id="dashboard">
   <div class="app">
-
+ 
     <div class="setup-banner" id="setup-banner">
       <div>⚙️ <strong>Apps Script no configurado.</strong> El HTML lee del Sheet vía CSV pero NO puede escribir todavía. Para activar edición, pega la URL del Apps Script en la configuración.</div>
       <button class="btn" onclick="promptApiUrl()">Configurar</button>
     </div>
-
+ 
     <div class="header">
       <div>
         <div class="brand-tag" id="brand-tag">// JIFU OPS</div>
@@ -327,15 +327,16 @@ tbody tr:hover { background: var(--bg-card); }
         </div>
       </div>
     </div>
-
+ 
     <!-- TABS -->
     <div class="tabs">
       <button class="tab active" data-view="pipeline">Pipeline <span class="tab-count" id="count-pipe">0</span></button>
       <button class="tab" data-view="rangos">🏆 Rangos</button>
       <button class="tab" data-view="x">Prospección X <span class="tab-count" id="count-x">0</span></button>
+      <button class="tab" data-view="fria">❄️ Lista Fría <span class="tab-count" id="count-fria">0</span></button>
       <button class="tab" data-view="config">⚙ Config</button>
     </div>
-
+ 
     <!-- VIEW: PIPELINE -->
     <div class="view active" id="view-pipeline">
       <div class="rank-card" id="rank-card">
@@ -365,7 +366,7 @@ tbody tr:hover { background: var(--bg-card); }
           </div>
         </div>
       </div>
-
+ 
       <div class="kpi-row">
         <div class="kpi"><div class="kpi-label">Pipeline</div><div class="kpi-value terracotta" id="kpi-total">—</div><div class="kpi-sub" id="kpi-total-sub">prospectos</div></div>
         <div class="kpi"><div class="kpi-label">Activos</div><div class="kpi-value olive" id="kpi-active">—</div><div class="kpi-sub">cerrados</div></div>
@@ -373,7 +374,7 @@ tbody tr:hover { background: var(--bg-card); }
         <div class="kpi"><div class="kpi-label">Pago binario/mes</div><div class="kpi-value mocha" id="kpi-commission">—</div><div class="kpi-sub" id="kpi-commission-sub">rango actual</div></div>
         <div class="kpi"><div class="kpi-label">Acción semana</div><div class="kpi-value" id="kpi-today">—</div><div class="kpi-sub">hot + warm</div></div>
       </div>
-
+ 
       <div class="action-queue">
         <div class="panel">
           <div class="panel-header"><span class="panel-title">🔥 Cerrar esta semana</span><span class="panel-count" id="urgent-count">0</span></div>
@@ -388,7 +389,7 @@ tbody tr:hover { background: var(--bg-card); }
           <div class="queue-list" id="schedule-list"></div>
         </div>
       </div>
-
+ 
       <div class="grid">
         <div class="sidebar">
           <div class="panel">
@@ -428,7 +429,7 @@ tbody tr:hover { background: var(--bg-card); }
           </div>
           <button class="btn" onclick="openNewModal()" style="width:100%">+ Nuevo prospecto</button>
         </div>
-
+ 
         <div class="panel">
           <div class="panel-header">
             <span class="panel-title">📋 Maestro de prospectos</span>
@@ -453,7 +454,7 @@ tbody tr:hover { background: var(--bg-card); }
         </div>
       </div>
     </div>
-
+ 
     <!-- VIEW: RANGOS -->
     <div class="view" id="view-rangos">
       <div class="panel">
@@ -472,7 +473,7 @@ tbody tr:hover { background: var(--bg-card); }
         construye su propia pierna. Persigue líderes primero.
       </div>
     </div>
-
+ 
     <!-- VIEW: PROSPECCIÓN X -->
     <div class="view" id="view-x">
       <div class="panel">
@@ -493,12 +494,32 @@ tbody tr:hover { background: var(--bg-card); }
         Aquí solo la visualizas. Para editar, abre el Sheet.
       </div>
     </div>
-
+ 
+    <!-- VIEW: LISTA FRÍA -->
+    <div class="view" id="view-fria">
+      <div class="panel">
+        <div class="x-controls">
+          <div class="x-stats">
+            <span>TOTAL: <strong id="fria-total">0</strong></span>
+            <span>📨 Encuesta: <strong id="fria-encuesta">0</strong></span>
+            <span>📞 Contactados: <strong id="fria-contacted">0</strong></span>
+            <span>⏳ Sin tocar: <strong id="fria-untouched">0</strong></span>
+          </div>
+          <input class="search-input" id="fria-search" placeholder="buscar..." style="width:200px"/>
+        </div>
+        <div class="x-grid" id="fria-grid"></div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-label">💡 Tu lista completa</div>
+        Aquí están todos tus 113 prospectos fríos. Cuando uno se calienta, lo pasas a PIPELINE.
+      </div>
+    </div>
+ 
     <!-- VIEW: CONFIG -->
     <div class="view" id="view-config">
       <div class="panel" style="padding:28px">
         <h3 style="font-family:var(--serif);font-size:24px;margin-bottom:8px">⚙ Configuración</h3>
-
+ 
         <div class="form-row" style="margin-top:20px">
           <div class="form-field full">
             <label>URL del Apps Script (para edición bidireccional)</label>
@@ -506,7 +527,7 @@ tbody tr:hover { background: var(--bg-card); }
           </div>
         </div>
         <button class="btn" onclick="saveApiUrl()">Guardar URL</button>
-
+ 
         <div class="tip-box" style="margin-top:24px">
           <div class="tip-label">💡 Cómo obtener la URL</div>
           1. Abre tu Google Sheet<br>
@@ -516,9 +537,9 @@ tbody tr:hover { background: var(--bg-card); }
           5. Acceso: Cualquier persona<br>
           6. Copia la URL y pégala arriba
         </div>
-
+ 
         <hr style="margin:32px 0;border:0;border-top:1px solid var(--line)"/>
-
+ 
         <h3 style="font-family:var(--serif);font-size:18px;margin-bottom:12px">URLs CSV actuales</h3>
         <div style="font-family:var(--mono);font-size:11px;color:var(--ink-mute);line-height:1.8;word-break:break-all">
           <div>📋 <strong>Pipeline:</strong> <span id="url-pipe">—</span></div>
@@ -528,20 +549,20 @@ tbody tr:hover { background: var(--bg-card); }
         </div>
       </div>
     </div>
-
+ 
     <div class="footer-note">
       // v5.0 · Live Sheet · construido para Ale Cartagena //
     </div>
   </div>
 </div>
-
+ 
 <!-- MODAL EDITOR -->
 <div class="modal-bg" id="modal-bg">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h3 id="modal-name">—</h3>
     <div class="modal-sub" id="modal-sub">—</div>
-
+ 
     <div class="modal-section">
       <div class="modal-label">📝 Editar datos</div>
       <div class="form-row">
@@ -606,27 +627,27 @@ tbody tr:hover { background: var(--bg-card); }
         <button class="btn btn-danger" id="modal-delete-btn" onclick="deleteProspect()">🗑 Borrar</button>
       </div>
     </div>
-
+ 
     <div class="modal-section" id="modal-score-section">
       <div class="modal-label">Score · Temperatura</div>
       <div id="modal-temp" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"></div>
     </div>
-
+ 
     <div class="modal-section">
       <div class="modal-label">💬 Script sugerido</div>
       <div class="script-box" id="modal-script">—</div>
       <button class="btn" style="margin-top:10px" onclick="copyScript()">📋 Copiar</button>
     </div>
-
+ 
     <div class="modal-section">
       <div class="modal-label">⚡ Acción recomendada</div>
       <div id="modal-action" style="font-weight:600;color:var(--terracotta);font-size:14px">—</div>
     </div>
   </div>
 </div>
-
+ 
 <div class="toast" id="toast">✓ Listo</div>
-
+ 
 <script>
 // ============= CONFIG =============
 const CSV_URLS = {
@@ -638,13 +659,13 @@ const CSV_URLS = {
   prosp_loyo: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQlhAmvnGlQXEKLVoPzPGTZX77mlX7wLLcImc6PCvHgwU_6TkJUry4BYNksFpv-G4oDuqRVeKI8aGUn/pub?gid=706411696&single=true&output=csv',
   prosp_monica: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQlhAmvnGlQXEKLVoPzPGTZX77mlX7wLLcImc6PCvHgwU_6TkJUry4BYNksFpv-G4oDuqRVeKI8aGUn/pub?gid=16498238&single=true&output=csv'
 };
-
+ 
 const LIDERES = {
   ale: { name: 'Alejandro Cartagena', short: 'Alejandro', color: 'terracotta' },
   loyo: { name: 'Roberto Loyo', short: 'Roberto', color: 'olive' },
   monica: { name: 'Monica Zabaleta', short: 'Mónica', color: 'rose' }
 };
-
+ 
 const RANKS = [
   { name: "Sin rango", min: 0, pay: 0 },
   { name: "Silver Executive", min: 7, pay: 700 },
@@ -660,7 +681,7 @@ const RANKS = [
   { name: "Royal Diamond", min: 15000, pay: 350000 },
   { name: "Crown Diamond", min: 25000, pay: 500000 },
 ];
-
+ 
 function calcRank(izq, der) {
   const lesser = Math.min(izq, der);
   let current = RANKS[0], next = RANKS[1];
@@ -669,7 +690,7 @@ function calcRank(izq, der) {
   }
   return { current, next, lesser };
 }
-
+ 
 // ============= STATE =============
 const state = {
   view: null,
@@ -683,11 +704,11 @@ const state = {
   apiUrl: localStorage.getItem('jifu_api_url') || '',
   xSearch: ''
 };
-
+ 
 const CACHE_KEY = 'jifu_cache_v5';
 function saveCache() { try { localStorage.setItem(CACHE_KEY, JSON.stringify({ pipeline: state.pipeline, trees: state.trees, ts: Date.now() })); } catch(e) {} }
 function loadCache() { try { const c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); if (c) { state.pipeline = c.pipeline; state.trees = c.trees; return c.ts; } } catch(e) {} return null; }
-
+ 
 // ============= CSV PARSER =============
 function parseCSV(text) {
   const rows = [];
@@ -718,14 +739,14 @@ function rowsToObjects(rows) {
     return obj;
   });
 }
-
+ 
 // ============= FETCH =============
 async function fetchCSV(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error('HTTP ' + resp.status);
   return await resp.text();
 }
-
+ 
 async function loadAll() {
   showLoading('Conectando con Google Sheets...');
   try {
@@ -776,7 +797,7 @@ async function loadAll() {
   }
   updateBanner();
 }
-
+ 
 // ============= WRITE OPERATIONS =============
 async function callApi(action, body) {
   if (!state.apiUrl) {
@@ -798,7 +819,7 @@ async function callApi(action, body) {
     return null;
   }
 }
-
+ 
 async function saveProspect() {
   const updates = {
     'Nombre': document.getElementById('edit-name').value.trim(),
@@ -812,7 +833,7 @@ async function saveProspect() {
     'Fecha próx. acción': document.getElementById('edit-fecha-prox').value
   };
   if (!updates['Nombre']) { alert('Nombre requerido'); return; }
-
+ 
   const p = state.selectedProspect;
   if (p && p.ID) {
     // UPDATE
@@ -832,7 +853,7 @@ async function saveProspect() {
     }
   }
 }
-
+ 
 async function deleteProspect() {
   if (!state.selectedProspect || !state.selectedProspect.ID) {
     closeModal();
@@ -846,11 +867,11 @@ async function deleteProspect() {
     setTimeout(() => loadAll(), 1500);
   }
 }
-
+ 
 function showLoading(msg) { document.getElementById('loading').classList.add('show'); setLoaderText(msg); }
 function setLoaderText(msg) { document.getElementById('loader-text').textContent = msg; }
 function hideLoading() { document.getElementById('loading').classList.remove('show'); }
-
+ 
 function setLiveStatus(online) {
   const el = document.getElementById('live-status');
   el.classList.toggle('error', !online);
@@ -858,7 +879,7 @@ function setLiveStatus(online) {
   if (state.lastSync) document.getElementById('last-sync').textContent = 'Sync: ' + state.lastSync.toLocaleString('es-MX');
   tick();
 }
-
+ 
 function showToast(msg, error = false) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -866,12 +887,12 @@ function showToast(msg, error = false) {
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2500);
 }
-
+ 
 function updateBanner() {
   const b = document.getElementById('setup-banner');
   b.classList.toggle('hidden', !!state.apiUrl);
 }
-
+ 
 function promptApiUrl() {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -879,7 +900,7 @@ function promptApiUrl() {
   document.getElementById('view-config').classList.add('active');
   document.getElementById('cfg-api-url').focus();
 }
-
+ 
 function saveApiUrl() {
   const url = document.getElementById('cfg-api-url').value.trim();
   if (url) {
@@ -890,7 +911,7 @@ function saveApiUrl() {
     loadAll();
   }
 }
-
+ 
 // ============= SCORING =============
 function scoreProspect(p) {
   const c = (p.Comentario || '').toLowerCase();
@@ -919,11 +940,11 @@ function scoreProspect(p) {
   if (c === '') return { score: 25, temp: 'cool', action: '💧 Falta diagnóstico', probability: 0.1 };
   return { score: 30, temp: 'cool', action: 'Seguimiento mensual', probability: 0.15 };
 }
-
+ 
 function tempLabel(t) { return { hot: 'Caliente', warm: 'Tibio', cool: 'Frío', dead: 'Muerto' }[t] || t; }
 function scoreClass(s) { if (s >= 75) return 'high'; if (s >= 50) return 'mid'; if (s >= 20) return 'low'; return 'zero'; }
 function piernaLabel(p) { return p === 'izq' ? '↰ Izq' : p === 'der' ? '↱ Der' : '—'; }
-
+ 
 function leaderShortCode(name) {
   if (!name) return 'none';
   const n = name.toLowerCase();
@@ -932,7 +953,7 @@ function leaderShortCode(name) {
   if (n.includes('monica') || n.includes('mónica')) return 'monica';
   return 'none';
 }
-
+ 
 function getScript(p) {
   const fn = (p.Nombre || '').split(' ')[0];
   const firstName = fn.charAt(0).toUpperCase() + fn.slice(1).toLowerCase();
@@ -949,7 +970,7 @@ function getScript(p) {
   if (/contactar/i.test(c)) return `Hola ${firstName}, retomando contacto. Tengo algo que creo te interesa sobre trading e ingresos. ¿10 min para platicarte?`;
   return `${firstName}, retomando. ¿Sigue el interés en trading? Te paso material o agendamos llamada corta. Tú me dices.`;
 }
-
+ 
 // ============= DATA HELPERS =============
 function enriched() {
   return state.pipeline.map(p => {
@@ -963,13 +984,13 @@ function enriched() {
     });
   });
 }
-
+ 
 function viewFilteredPipeline() {
   const all = enriched();
   if (state.view === 'rollup') return all;
   return all.filter(p => p._leaderCode === state.view);
 }
-
+ 
 function applyFilters(data) {
   return data.filter(p => {
     if (state.filters.temp !== 'all' && p.temp !== state.filters.temp) return false;
@@ -986,7 +1007,7 @@ function applyFilters(data) {
     return true;
   });
 }
-
+ 
 function sorted(arr) {
   const { key, dir } = state.sort;
   return [...arr].sort((a, b) => {
@@ -1001,12 +1022,12 @@ function sorted(arr) {
     return 0;
   });
 }
-
+ 
 function getTreeForView() {
   if (state.view === 'rollup') return [...state.trees.ale, ...state.trees.loyo, ...state.trees.monica];
   return state.trees[state.view] || [];
 }
-
+ 
 function getLegStats(tree) {
   let izq = 0, der = 0;
   tree.forEach(r => {
@@ -1016,7 +1037,7 @@ function getLegStats(tree) {
   });
   return { izq, der };
 }
-
+ 
 // ============= LANDING / VIEW SWITCH =============
 function selectLeader(leader) {
   state.view = leader;
@@ -1026,12 +1047,12 @@ function selectLeader(leader) {
   if (state.pipeline.length === 0) loadAll();
   else { renderAll(); updateBanner(); }
 }
-
+ 
 function changeLeader() {
   document.getElementById('landing').style.display = 'flex';
   document.getElementById('dashboard').classList.remove('active');
 }
-
+ 
 function setupHeader() {
   const v = state.view;
   const tag = document.getElementById('brand-tag');
@@ -1061,7 +1082,7 @@ function setupHeader() {
     sub.textContent = 'Tu pipeline · tu árbol · tu rango';
   }
 }
-
+ 
 // ============= RENDER =============
 function renderRankCard() {
   const tree = getTreeForView();
@@ -1084,7 +1105,7 @@ function renderRankCard() {
     document.getElementById('rank-progress-fill').style.width = '100%';
   }
 }
-
+ 
 function renderKPIs() {
   const view = viewFilteredPipeline();
   const tree = getTreeForView();
@@ -1099,7 +1120,7 @@ function renderKPIs() {
   document.getElementById('kpi-today').textContent = view.filter(p => p.temp === 'hot' || p.temp === 'warm').length;
   document.getElementById('count-pipe').textContent = view.length;
 }
-
+ 
 function renderQueues() {
   const view = viewFilteredPipeline();
   const urgent = view.filter(p => p.temp === 'hot').sort((a,b) => b.score - a.score).slice(0, 8);
@@ -1118,7 +1139,7 @@ function renderQueues() {
   document.getElementById('warm-count').textContent = warm.length;
   document.getElementById('schedule-count').textContent = sched.length;
 }
-
+ 
 function renderTable() {
   const view = viewFilteredPipeline();
   const data = sorted(applyFilters(view));
@@ -1137,7 +1158,7 @@ function renderTable() {
   document.getElementById('table-count').textContent = `${data.length} visibles`;
   tbody.querySelectorAll('tr').forEach(tr => tr.addEventListener('click', () => openModal(tr.dataset.id)));
 }
-
+ 
 function renderRanksView() {
   const tree = getTreeForView();
   const { izq, der } = getLegStats(tree);
@@ -1154,7 +1175,7 @@ function renderRanksView() {
   }).join('');
   document.getElementById('rank-rows').innerHTML = html;
 }
-
+ 
 function renderX() {
   // Determinar qué lista mostrar según view
   let list = [];
@@ -1163,7 +1184,7 @@ function renderX() {
   } else {
     list = state.prosp[state.view] || [];
   }
-
+ 
   // Normalizar campos (cada CSV puede tener headers ligeramente distintos)
   const items = list.map(p => {
     const name = p.Nombre || p.nombre || p[Object.keys(p)[0]] || '';
@@ -1178,18 +1199,18 @@ function renderX() {
     const notas = p.Notas || p.notas || '';
     return { name, encuesta, contactado, notas };
   }).filter(x => x.name);
-
+ 
   // Filtro búsqueda
   const q = (state.xSearch || '').toLowerCase();
   const filtered = q ? items.filter(p => p.name.toLowerCase().includes(q) || (p.notas || '').toLowerCase().includes(q)) : items;
-
+ 
   // Stats
   document.getElementById('x-total').textContent = items.length;
   document.getElementById('x-encuesta').textContent = items.filter(p => p.encuesta).length;
   document.getElementById('x-contacted').textContent = items.filter(p => p.contactado).length;
   document.getElementById('x-untouched').textContent = items.filter(p => !p.encuesta && !p.contactado).length;
   document.getElementById('count-x').textContent = items.length;
-
+ 
   // Render cards
   const grid = document.getElementById('x-grid');
   if (filtered.length === 0) {
@@ -1208,7 +1229,42 @@ function renderX() {
     </div>
   `).join('');
 }
-
+ 
+function renderFria() {
+  // LISTA FRÍA = todos los prospectos del PIPELINE que están "En proceso" o "No contact"
+  const all = enriched();
+  const list = all.filter(p => p.Status === 'En proceso' || p.Status === 'No contact' || p.Status === 'Inactivo');
+  
+  // Filtro búsqueda
+  const q = (document.getElementById('fria-search').value || '').toLowerCase();
+  const filtered = q ? list.filter(p => p._name.toLowerCase().includes(q) || (p.Comentario || '').toLowerCase().includes(q)) : list;
+ 
+  // Stats
+  document.getElementById('fria-total').textContent = list.length;
+  document.getElementById('fria-encuesta').textContent = '—';
+  document.getElementById('fria-contacted').textContent = '—';
+  document.getElementById('fria-untouched').textContent = list.length;
+  document.getElementById('count-fria').textContent = list.length;
+ 
+  // Render cards
+  const grid = document.getElementById('fria-grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:24px;text-align:center;color:var(--ink-mute);font-family:var(--mono);font-size:12px">— sin prospectos —</div>`;
+    return;
+  }
+  
+  grid.innerHTML = filtered.map(p => `
+    <div class="x-card" onclick="openModal('${escapeHtml(p.ID || p._name)}')">
+      <div class="x-name">${escapeHtml(p._name)}</div>
+      <div style="margin-top:6px">
+        <span class="badge ${p.temp}">${tempLabel(p.temp)}</span>
+        <span class="x-tag" style="background:var(--gold-bg);color:var(--gold);margin-left:4px">${p.Status}</span>
+      </div>
+      <div style="margin-top:6px;font-size:11px;color:var(--ink-mute);font-style:italic">${escapeHtml(p.action)}</div>
+    </div>
+  `).join('');
+}
+ 
 function renderConfig() {
   document.getElementById('cfg-api-url').value = state.apiUrl || '';
   document.getElementById('url-pipe').textContent = CSV_URLS.pipeline.substring(0, 80) + '...';
@@ -1216,7 +1272,7 @@ function renderConfig() {
   document.getElementById('url-loyo').textContent = CSV_URLS.arbol_loyo.substring(0, 80) + '...';
   document.getElementById('url-mon').textContent = CSV_URLS.arbol_monica.substring(0, 80) + '...';
 }
-
+ 
 function renderAll() {
   renderRankCard();
   renderKPIs();
@@ -1224,10 +1280,11 @@ function renderAll() {
   renderTable();
   renderRanksView();
   renderX();
+  renderFria();
   renderConfig();
   setLiveStatus(true);
 }
-
+ 
 // ============= MODAL =============
 function openModal(id) {
   const all = enriched();
@@ -1252,7 +1309,7 @@ function openModal(id) {
   document.getElementById('modal-delete-btn').style.display = '';
   document.getElementById('modal-bg').classList.add('open');
 }
-
+ 
 function openNewModal() {
   state.selectedProspect = null;
   document.getElementById('modal-name').textContent = 'Nuevo prospecto';
@@ -1272,20 +1329,20 @@ function openNewModal() {
   document.getElementById('modal-delete-btn').style.display = 'none';
   document.getElementById('modal-bg').classList.add('open');
 }
-
+ 
 function closeModal() { document.getElementById('modal-bg').classList.remove('open'); }
-
+ 
 function copyScript() {
   navigator.clipboard.writeText(document.getElementById('modal-script').textContent);
   showToast('📋 Copiado');
 }
-
+ 
 // ============= HELPERS =============
 function escapeHtml(s) {
   if (s == null) return '';
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
-
+ 
 function bindChips() {
   document.querySelectorAll('.chip').forEach(c => {
     c.onclick = () => {
@@ -1297,8 +1354,9 @@ function bindChips() {
     };
   });
 }
-
+ 
 document.getElementById('search').addEventListener('input', e => { state.filters.search = e.target.value; renderTable(); });
+document.getElementById('fria-search').addEventListener('input', e => { renderFria(); });
 document.querySelectorAll('th[data-sort]').forEach(th => {
   th.addEventListener('click', () => {
     const k = th.dataset.sort;
@@ -1318,13 +1376,13 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 document.getElementById('modal-bg').addEventListener('click', e => { if (e.target.id === 'modal-bg') closeModal(); });
-
+ 
 function tick() {
   const el = document.getElementById('now');
   if (el) el.textContent = new Date().toLocaleString('es-MX', { weekday: 'short', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }).toUpperCase();
 }
 setInterval(tick, 30000);
-
+ 
 bindChips();
 tick();
 updateBanner();
